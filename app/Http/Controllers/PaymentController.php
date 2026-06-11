@@ -410,7 +410,7 @@ class PaymentController extends Controller
         return response()->json([
             'order_id'       => $order->id_order,
             'status'         => $order->status,
-            'payment_status' => $order->payment?->status ?? 'pending',
+            'payment_status' => $order->payment?->status ?? 'in proggress',
             'is_paid'        => $order->payment?->status === 'paid',
             'payment_method' => $order->payment?->metode ?? '-',
             'service_name'   => $order->detail_pesanan ?? '-',
